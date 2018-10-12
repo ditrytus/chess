@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+
+  web:
+    build:
+      context: ./chess-web
+      dockerfile: dev.Dockerfile
+    volumes:
+      - "./chess-web:/chess/src"
+    ports:
+      - "3000:4200"
+
+      
