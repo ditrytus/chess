@@ -11,4 +11,13 @@ services:
     ports:
       - "3000:4200"
 
+  server:
+    build:
+      context: ./chess-api
+      dockerfile: dev.Dockerfile
+    volumes:
+      - "./chess-api:/chess/src"
+    ports:
+      - "3001:5000"
+
       
